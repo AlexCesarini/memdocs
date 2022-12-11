@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune
-description: Add or create an iOS, iPadOS, or macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. See if Azure AD or Kerberos authentication is right for your organization.
+title: Microsoft Enterprise SSO plug-in in Microsoft Intune (iOS/iPadOS)
+description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. See if Azure AD or Kerberos authentication is right for your organization.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
+author: TBC
+ms.author: alessanc
+manager: ianfarr
 ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: beflamm
+ms.reviewer: tbc
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune
+# Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Microsoft Intune
 
 The Microsoft Enterprise SSO plug-in (preview) provides a single sign-on (SSO) to apps and websites that use Microsoft Azure Active Directory (AD) for authentication, including Microsoft 365. This plug-in uses the [Apple single sign on app extension](device-features-configure.md#single-sign-on-app-extension). It reduces the number of authentication prompts users get when using devices managed by Mobile Device Management (MDM), including Microsoft Intune.
 
@@ -40,9 +40,8 @@ For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - 
 This feature applies to:
 
 - iOS/iPadOS
-- macOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for Apple Devices with Intune.
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Apple Devices with Intune.
 
 > [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
@@ -54,18 +53,13 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The device must support the plug-in:
 
   - iOS/iPadOS 13.0 and newer
-  - macOS 10.15 and newer
 
 - On iOS/iPadOS 13.0 and newer devices, install the Microsoft Authenticator app.
 
   The Microsoft Authenticator app can be installed manually by users, or by deploying an app policy in Intune. For information on how to install the Microsoft Authenticator app, see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
 
-- On macOS 10.15 and newer devices, install the Company Portal app.
-
-  The Company Portal app can be installed manually by users, or by deploying an app policy in Intune. For a list of options on how to install the Company Portal app, see [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
-
 > [!NOTE]
-> On Apple devices, Apple requires that the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
+> On Apple devices, Apple requires that the SSO app extension and the app (Authenticator or Company Portal (?) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
 
 ## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
 
@@ -96,11 +90,12 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
     - **Platform**: Choose your platform:
 
         - **iOS/iPadOS**
-        - **macOS**
 
     - **Profile**: Select **Device features**. Or, select **Templates** > **Device features**.
 
 4. Select **Create**.
+
+
 5. In **Basics**, enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS: Microsoft Enterprise SSO plug-in** or **macOS: Microsoft Enterprise SSO plug-in**.
