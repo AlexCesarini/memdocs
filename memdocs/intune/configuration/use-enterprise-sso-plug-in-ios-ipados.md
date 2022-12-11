@@ -95,19 +95,22 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
 4. Select **Create**.
 
+<img src="iOS-1.png" alt="Device features" title="Device features iOS/iPadOS" />
 
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS: Microsoft Enterprise SSO plug-in** or **macOS: Microsoft Enterprise SSO plug-in**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS: Microsoft Enterprise SSO plug-in**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
     - **SSO app extension type**: Select **Microsoft Azure AD**.
+    <img src="iOS-2.png" alt="Microsoft Azure AD SSO" title="Microsoft Azure AD SSO" />
+    
     - **Enable shared device mode**:  
 
-      - **Not configured**: Intune doesn't change or update this setting. For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option.
+      - **Not configured**: Intune doesn't change or update this setting. _For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option._
       - **Yes**: Select this option if the targeted devices are using Azure AD Shared device mode. For more information, see [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
@@ -121,6 +124,8 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
       | **browser_sso_disable_mfa** | Integer | Set to `0` (default) to require the Microsoft Enterprise SSO plug-in use multi-factor authentication (MFA) during bootstrap. Requiring MFA during bootstrap reduces prompts for MFA in apps that are protected by conditional access and require MFA. Microsoft recommends MFA be enabled to increase security and improve the user experience.<br/><br/>Set to `1` to disable MFA in bootstrap. Users are prompted by individual apps that require MFA. |
       | **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these prompts. |
 
+ <img src="iOS-3.png" alt="Additional configuration" title="Additional configuration" />
+ 
       > [!TIP]
       > For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
 
@@ -132,23 +137,18 @@ When the device checks in with the Intune service, it will receive this profile.
 
 ## End user experience
 
-:::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
+<img src="flow-chart-end-user-iOSiPadOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
 
 - If you're not deploying the Microsoft Authenticator or Company Portal app using an app policy, then users must install these apps manually. Remember:
   - On iOS/iPadOS devices, users install the Microsoft Authenticator app.
-  - On macOS devices, users install the Company Portal app.
-
+  
   On Apple devices, Apple requires the SSO app extension and the app (Authenticator or Company Portal) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-  :::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
+<img src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
-
-On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests about it.
-
-Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, send them to the Company Portal menu bar > **Company Portal** > **Preferences** and tell them to select or deselect **Don’t ask me to sign in with single sign-on for this device**.    
 
 ## Next steps
 
