@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 07/19/2021
+ms.date: 12/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,10 +37,6 @@ For example, to allow a Microsoft app that doesn't support MSAL, add `com.micros
 
 For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#applications-that-dont-use-msal).  
 
-This feature applies to:
-
-- iOS/iPadOS
-
 This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Apple Devices with Intune.
 
 > [!IMPORTANT]
@@ -48,18 +44,17 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 ## Prerequisites
 
-To use the Microsoft Enterprise SSO plug-in for Apple devices:
-
 - The device must support the plug-in:
 
-  - iOS/iPadOS 13.0 and newer
+- The device is managed with Intune.
 
-- On iOS/iPadOS 13.0 and newer devices, install the Microsoft Authenticator app.
+- iOS/iPadOS 13.0 and newer
 
-  The Microsoft Authenticator app can be installed manually by users, or by deploying an app policy in Intune. For information on how to install the Microsoft Authenticator app, see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+- Microsoft Authenticator app installed on the device.
+  The Microsoft Authenticator app can be installed manually by users, or deployed via Intune. For information on how to install the Microsoft Authenticator app, see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
 
 > [!NOTE]
-> On Apple devices, Apple requires that the SSO app extension and the app (Authenticator or Company Portal (?) be installed. Users don't need to use the Authenticator or Company Portal apps; they just need to be installed on the device.
+> On iOS and iPad devices, Apple requires that the SSO app extension and the Microsoft Authenticator app to be installed. Users don't need to use or configure the Authenticator app; it just needs to be installed on the device.
 
 ## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
 
@@ -72,8 +67,8 @@ To determine the correct SSO extension type for your scenario, use the following
 ---
 | Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
 | --- | --- |
-| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type|
-| Supports the following apps:<br/><br/>- Microsoft 365 <br/>- Apps, websites or services integrated with Azure AD | Supports the following apps:<br/><br/>- Apps, websites or services integrated with AD |
+| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type |
+| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/><br/> - Apps, websites or services integrated with AD <br/> |
 
 ---
 
@@ -105,13 +100,13 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
-    - **SSO app extension type**: Select **Microsoft Azure AD**.
+    - **SSO app extension type**: Select **Microsoft Azure AD**. <br/>
     <img src="iOS-2.png" alt="Microsoft Azure AD SSO" title="Microsoft Azure AD SSO" />
     
     - **Enable shared device mode**:  
 
       - **Not configured**: Intune doesn't change or update this setting. _For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option._
-      - **Yes**: Select this option if the targeted devices are using Azure AD Shared device mode. For more information, see [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
+      - Yes: Select this option only if the targeted devices are using Azure AD Shared device mode. For more information, see [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
