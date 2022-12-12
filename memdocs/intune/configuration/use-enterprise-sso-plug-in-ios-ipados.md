@@ -146,7 +146,7 @@ For more information, see [How long does it take for devices to get a policy](de
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-<img src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
+<img src="iOS-5.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
