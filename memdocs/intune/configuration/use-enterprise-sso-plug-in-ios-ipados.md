@@ -150,6 +150,8 @@ For more information, see [How long does it take for devices to get a policy](de
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
+You can test it by opening Safar in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados abd opening the site portal.office.com
+
 ## Next steps
 
 - For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
