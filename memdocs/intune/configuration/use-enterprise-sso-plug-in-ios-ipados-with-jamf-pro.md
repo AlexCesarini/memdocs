@@ -92,7 +92,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 1. Sign in to the Jamf Pro portal.
 2. To create an iOS/iPadOS profile, select **Devices** > **Configuration profiles** > **New**.
 
-    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/jamf-pro-configuration-profiles.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
+    <img type="content" src="Jamf-1.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
 
 3. - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
 
