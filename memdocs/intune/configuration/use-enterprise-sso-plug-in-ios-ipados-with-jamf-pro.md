@@ -98,7 +98,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
 
-    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
+    <img type="content" src="Jamf-2.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
 
 4. Enter the following properties:
 
@@ -119,9 +119,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
 
-    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
+    <img type="content" src="Jamf-3.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
 
-   <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.">
+   <img type="content" src="Jamf-4.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.">
 
 5. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
@@ -142,7 +142,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     </plist>
     ```
 
-    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.">
+    <img type="content" src="Jamf-5.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.">
 
     - These PLIST settings configure the following SSO Extension options:
 
