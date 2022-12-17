@@ -121,7 +121,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
 
-    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.":::
+   <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.">
 
 5. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
