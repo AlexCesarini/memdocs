@@ -129,7 +129,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> (????)
     <plist version="1.0">
     <dict>
         <key>AppPrefixAllowList</key>
@@ -162,7 +162,7 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 ## End user experience
 
-:::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="End user flow chart when installing SSO app extension on iOS/iPadOS and macOS devices in Jamf Pro.":::
+<img type="content" src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="End user flow chart when installing SSO app extension on iOS/iPadOS and macOS devices in Jamf Pro.">
 
 - If you're not deploying the Microsoft Authenticator or Company Portal app using Jamf Pro, then users must install these apps manually.
 
