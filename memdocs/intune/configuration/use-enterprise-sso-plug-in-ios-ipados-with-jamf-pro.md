@@ -142,7 +142,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     </plist>
     ```
 
-    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.":::
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.">
 
     - These PLIST settings configure the following SSO Extension options:
 
