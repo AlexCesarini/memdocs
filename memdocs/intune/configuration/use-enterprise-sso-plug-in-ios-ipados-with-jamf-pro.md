@@ -94,7 +94,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/jamf-pro-configuration-profiles.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
 
-3. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
+3. - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
+
+4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
 
     <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
 
@@ -102,24 +104,22 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     - **Payload Type**: SSO
     - **Extension Identifier**:
-      - **macOS**: com.microsoft.CompanyPortalMac.ssoextension
       - **iOS/iPadOS**: com.microsoft.azureauthenticator.ssoextension
     - **Team Identifier**:
-      - **macOS**: UBF8T346G9
       - **iOS/iPadOS**: No value is needed, leave the field blank.
     - **Sign-On Type**: Redirect
-    - **URLs**:
+    - **URLs** (add one by one):
       - `https://login.microsoftonline.com`
       - `https://login.microsoft.com`
       - `https://sts.windows.net`
       - `https://login.partner.microsoftonline.cn`
       - `https://login.chinacloudapi.cn`
-      - `https://login.microsoftonline.de`
+      - `https://login.microsoftonline.de (?)`
       - `https://login.microsoftonline.us`
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
 
-    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.":::
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
 
     :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.":::
 
