@@ -96,7 +96,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
 3. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
 
-    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.":::
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
 
 4. Enter the following properties:
 
