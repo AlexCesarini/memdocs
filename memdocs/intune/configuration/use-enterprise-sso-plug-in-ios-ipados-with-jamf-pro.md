@@ -94,7 +94,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     <img type="content" src="Jamf-1.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
 
-3. - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
+3. **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **Microsoft Enterprise SSO plug-in**.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
 
