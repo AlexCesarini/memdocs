@@ -139,10 +139,7 @@ For more information, see [How long does it take for devices to get a policy](de
 
 <img src="flow-chart-end-user-iOSiPadOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
 
-- If you're not deploying the Microsoft Authenticator using an app policy, then users must install these apps manually. Remember:
-  - On iOS/iPadOS devices, users install the Microsoft Authenticator app.
-  
-  On Apple devices, Apple requires the SSO app extension and the Authenticator be installed. Users don't need to use the Authenticator apps; it just needs to be installed on the device.
+- If you're not deploying the Microsoft Authenticator using an app policy, then users must install it manually. Users don't need to use the Authenticator apps; it just needs to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
