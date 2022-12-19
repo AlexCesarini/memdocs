@@ -104,9 +104,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     - **Payload Type**: SSO
     - **Extension Identifier**:
-      - **iOS/iPadOS**: com.microsoft.azureauthenticator.ssoextension
+      - com.microsoft.azureauthenticator.ssoextension
     - **Team Identifier**:
-      - **iOS/iPadOS**: No value is needed, leave the field blank.
+      - No value is needed, leave the field blank.
     - **Sign-On Type**: Redirect
     - **URLs** (add one by one):
       - `https://login.microsoftonline.com`
