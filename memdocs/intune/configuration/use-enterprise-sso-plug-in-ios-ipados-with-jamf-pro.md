@@ -175,7 +175,7 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test it by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com
+You can test Single Sign on by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com, no username and password will be required.
 
 
 ## Next steps
