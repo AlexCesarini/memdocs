@@ -162,26 +162,21 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 ## End user experience
 
-<img type="content" src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/flow-chart-end-user.png" alt-text="End user flow chart when installing SSO app extension on iOS/iPadOS and macOS devices in Jamf Pro.">
+<img src="flow-chart-end-user-iOSiPadOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
 
-- If you're not deploying the Microsoft Authenticator or Company Portal app using Jamf Pro, then users must install these apps manually.
-
-  Remember:
-
+- If you're not deploying the Microsoft Authenticator using an app policy, then users must install these apps manually. Remember:
   - On iOS/iPadOS devices, users install the Microsoft Authenticator app.
-  - On macOS devices, users install the Company Portal app.
-
-  On Apple devices, Apple requires the SSO app extension and the app (Authenticator or Company Portal) be installed. **Users don't need to use the Authenticator or Company Portal apps. The app just need to be installed on the device.**
+  
+  On Apple devices, Apple requires the SSO app extension and the Authenticator be installed. Users don't need to use the Authenticator apps; it just needs to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-  :::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Jamf Pro.":::
+<img src="iOS-5.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests.
+You can test it by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com
 
-Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, go to the Company Portal menu bar > **Company Portal** > **Preferences**. They can select or deselect **Don’t ask me to sign in with single sign-on for this device**.
 
 ## Next steps
 
