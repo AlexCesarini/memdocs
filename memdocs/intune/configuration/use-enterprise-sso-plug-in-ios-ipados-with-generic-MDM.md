@@ -94,12 +94,12 @@ In the MDM portal, you create a Device configuration profile. This profile inc
 3. Select an option called **Single Sign-On Extensions** or **SSO extension**.
 4. Enter the following properties:
 
-| **Setting** | **Value** |
+| **Key** | **Value** |
 | --- | --- |
 | Payload Type | SSO |
 | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
 | Sign-On Type | **Redirect** |
-| URLs | - `https://login.microsoftonline.com` - `https://login.microsoft.com` - `https://sts.windows.net`  `https://login.partner.microsoftonline.cn` - `https://login.chinacloudapi.cn` - `https://login.microsoftonline.de (?)` - `https://login.microsoftonline.us` - `https://login.usgovcloudapi.net` - `https://login-us.microsoftonline.com` |
+| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/>  `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.de (?)` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
 5. Optionally you could other  properties like
 
