@@ -9,7 +9,7 @@ ms.author: alessanc
 manager: ianfarr
 ms.date: 12/12/2022
 ms.topic: how-to
-ms.service: microsoft-intune
+ms.service: ?
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology:
@@ -23,7 +23,7 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: 
 ms.collection: M365-identity-device-management
 ---
 
