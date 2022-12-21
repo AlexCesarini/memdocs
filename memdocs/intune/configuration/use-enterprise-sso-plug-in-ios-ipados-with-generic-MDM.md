@@ -47,7 +47,6 @@ This article shows explain how to deploy the Microsoft Enterprise SSO plug-in (p
 > [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see:
 >
-> - [Public preview in Microsoft Intune](../fundamentals/public-preview.md)
 > - [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)
 
 ## Prerequisites
