@@ -100,16 +100,7 @@ In the MDM portal, you create a Device configuration profile. This profile inc
 | Payload Type | SSO |
 | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
 | Sign-On Type | **Redirect** |
-| URLs |
-      - `https://login.microsoftonline.com`
-      - `https://login.microsoft.com`
-      - `https://sts.windows.net`
-      - `https://login.partner.microsoftonline.cn`
-      - `https://login.chinacloudapi.cn`
-      - `https://login.microsoftonline.de (?)`
-      - `https://login.microsoftonline.us`
-      - `https://login.usgovcloudapi.net`
-      - `https://login-us.microsoftonline.com` |
+| URLs | - `https://login.microsoftonline.com` - `https://login.microsoft.com` - `https://sts.windows.net`  `https://login.partner.microsoftonline.cn` - `https://login.chinacloudapi.cn` - `https://login.microsoftonline.de (?)` - `https://login.microsoftonline.us` - `https://login.usgovcloudapi.net` - `https://login-us.microsoftonline.com` |
 
 5. Optionally you could other  properties like
 
