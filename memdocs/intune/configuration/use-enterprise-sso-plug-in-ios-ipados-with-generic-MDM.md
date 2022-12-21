@@ -54,13 +54,13 @@ This article shows explain how to deploy the Microsoft Enterprise SSO plug-in (p
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
 - The devive must be managed (MDM)
-- The MDM solution supports configuring the [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy
+- The MDM solution must support configuring the [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
 
 - Microsoft Authenticator app alredy installed on the device.
 
-  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through an MDM. 
+  The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM. 
 
 > [!NOTE]
 > On iOS/iPadOS 13.0 devices, Apple requires that the Microsoft  Authenticator app to be installed. 
@@ -98,13 +98,13 @@ In the MDM portal, you create a Device configuration profile. This profile inc
 | Payload Type | SSO |
 | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
 | Sign-On Type | **Redirect** |
-| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/>  `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.de (?)` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
+| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.de (?)` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
-5. Optionally you could other  properties like
+5. Optionally you could configure other  properties like
 
       | Key | Type | Value |
       | --- | --- | --- |
-      | **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.` to allow all Microsoft apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
+      | **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.,com.apple.` to allow all Microsoft and Apple apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
       | **browser_sso_interaction_enabled** | Integer | When set to `1`, users can sign in from Safari browser, and from apps that don't support MSAL. Enabling this setting allows users to bootstrap the extension from Safari or other apps.|
       | **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these   prompts. |
 
