@@ -2,8 +2,7 @@
 # required metadata
 
 title: Configure the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices with an MDM
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in an MDM. 
-See if Azure AD or Kerberos authentication is right for your organization.
+description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in an MDM. See if Azure AD or Kerberos authentication is right for your organization.
 keywords:
 author: TBC
 ms.author: alessanc
