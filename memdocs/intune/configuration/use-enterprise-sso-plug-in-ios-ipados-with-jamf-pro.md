@@ -2,14 +2,14 @@
 # required metadata
 
 title: Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. See if Azure AD or Kerberos authentication is right for your organization.
+description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
 keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
 ms.date: 12/12/2022
 ms.topic: how-to
-ms.service: microsoft-intune
+ms.service: 
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology:
@@ -19,11 +19,11 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: beflamm, miepping
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: 
 ms.collection: M365-identity-device-management
 ---
 
@@ -47,7 +47,6 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 > [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see:
 >
-> - [Public preview in Microsoft Intune](../fundamentals/public-preview.md)
 > - [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)
 
 ## Prerequisites
