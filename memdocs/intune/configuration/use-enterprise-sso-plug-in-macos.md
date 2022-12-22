@@ -124,7 +124,7 @@ For more information, see [How long does it take for devices to get a policy](de
 
 ## End user experience
 
-<img src="flow-chart-end-user-macOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
+<img src="flow-chart-end-user-macOS.png" alt="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune." title="flow chart end user macOS">
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
