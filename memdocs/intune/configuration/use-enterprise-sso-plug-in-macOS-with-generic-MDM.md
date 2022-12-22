@@ -39,10 +39,10 @@ For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - 
 
 This feature applies to:
 
-- iOS/iPadOS
+- macOS
 
 
-This article shows explain how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with a generic MDM solution..
+This article shows explain how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Devices with a generic MDM solution..
 
 > [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see:
@@ -56,15 +56,15 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The devive must be managed (MDM)
 - The MDM solution must support configuring the [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy
 - The device must support the plug-in:
-  - iOS/iPadOS 13.0 and newer
+  - macOS 10.15 and newer
 
 - Microsoft Company Portal app alredy installed on the device.
 
   The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM. 
 
 > [!NOTE]
-> On iOS/iPadOS 13.0 devices, Apple requires that the Microsoft  Authenticator app to be installed. 
-Users don't need to use the Authenticator app. The app just need to be installed on the device. 
+> On macOS devices, Apple requires that the Company Portal app to be installed. 
+Users don't need to use the Company Portal app. The app just need to be installed on the device. 
 
 ## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
 
@@ -97,8 +97,9 @@ In the MDM portal, you create a Device configuration profile. This profile inc
 | --- | --- |
 | Payload Type | SSO |
 | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
+| Team Identifier | UBF8T346G9
 | Sign-On Type | **Redirect** |
-| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.de (?)` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
+| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/>  - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
 5. Optionally you could configure other  properties like
 
@@ -117,17 +118,17 @@ When the device checks in with the MDM service, it receives this profile.
 
 ## End user experience
 
-<img src="flow-chart-end-user-iOSiPadOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
+<img src="flow-chart-end-user-macOS.png" alt="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
 
-- If you're not deploying the Microsoft Authenticator using an app policy, then users must install it manually. Users don't need to use the Authenticator apps; it just needs to be installed on the device.
+- If you're not deploying the Company Portal using an app policy, then users must install it manually. Users don't need to use the Company Portal apps; it just needs to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-<img src="iOS-5.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
+<img src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on macOS devices.">
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test Single Sign on by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com, no username and password will be required.
+You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac) and opening the site https://portal.office.com, no username and password will be required.
 
 On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests.
 
