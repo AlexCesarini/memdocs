@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
+title: Use the Microsoft Enterprise SSO plug-in on macOS devices in Jamf Pro
+description: Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
 keywords:
 author: TBC
 ms.author: alessanc
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
+# Use the Microsoft Enterprise SSO plug-in on macOS devices in Jamf Pro
 
 The Microsoft Enterprise SSO plug-in (preview) provides single sign-on (SSO) to apps and websites that use Microsoft Azure Active Directory (Azure AD) for authentication, including Microsoft 365. This plug-in uses the Apple single sign-on app extension framework. It reduces the number of authentication prompts users get when using devices managed by Mobile Device Management (MDM), including Jamf Pro.
 
@@ -39,10 +39,10 @@ For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - 
 
 This feature applies to:
 
-- iOS/iPadOS
+- macOS
 
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with Jamf Pro.
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Devices with Jamf Pro.
 
 > [!IMPORTANT]
 > The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see:
@@ -53,16 +53,16 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
-- The devive must be managed via Jamf Pro
+- The device must be managed via Jamf Pro
 - The device must support the plug-in:
-  - iOS/iPadOS 13.0 and newer
+  - macOS 10.15 and newer
 
-- Microsoft Authenticator app installed on the device.
+- Company Portal app installed on the device.
 
-  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
+  The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
 
 > [!NOTE]
-> On iOS/iPadOS 13.0 devices, Apple requires that the Microsoft  Authenticator app to be installed. Users don't need to use the Authenticator app. The app just need to be installed on the device. 
+> On macOS devices, Apple requires that the Company Portal app to be installed. Users don't need to use the Company Portal. The app just need to be installed on the device. 
 >
 > **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
@@ -86,26 +86,26 @@ For more information on the single sign-on extension, see [Single sign-on app ex
 
 ## Create a single sign-on app extension configuration profile in Jamf Pro
 
-In the Jamf Pro portal, you create a Computer or Device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
+In the Jamf Pro portal, you create a Computer configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
 1. Sign in to the Jamf Pro portal.
-2. To create an iOS/iPadOS profile, select **Devices** > **Configuration profiles** > **New**.
+2. To create a macOS, select **Computers** > **Configuration profiles** > **New**.
 
-    <img type="content" src="Jamf-1.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/jamf-pro-configuration-profiles.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.">
 
 3. **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **Microsoft Enterprise SSO plug-in**.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
 
-    <img type="content" src="Jamf-2.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.">
 
 4. Enter the following properties:
 
     - **Payload Type**: SSO
     - **Extension Identifier**:
-      - com.microsoft.azureauthenticator.ssoextension
+      - com.microsoft.CompanyPortalMac.ssoextension
     - **Team Identifier**:
-      - No value is needed, leave the field blank.
+      - UBF8T346G9
     - **Sign-On Type**: Redirect
     - **URLs** (add one by one):
       - `https://login.microsoftonline.com`
@@ -118,9 +118,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
 
-    <img type="content" src="Jamf-3.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.">
 
-   <img type="content" src="Jamf-4.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.">
+   <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.">
 
 5. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
@@ -141,7 +141,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     </plist>
     ```
 
-    <img type="content" src="Jamf-5.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.">
+    <img type="content" src="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.">
 
     - These PLIST settings configure the following SSO Extension options:
 
@@ -161,17 +161,17 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 ## End user experience
 
-<img src="flow-chart-end-user-iOSiPadOS.png" alt="End user flow chart when installing SSO app app extension on iOS/iPadOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
+<img src="flow-chart-end-user-macOS.png" alt="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune." title="flow chart end user iOSiPadOS">
 
-- If you're not deploying the Microsoft Authenticator using an app policy, then users must install it manually. Users don't need to use the Authenticator apps; it just needs to be installed on the device.
+- If you're not deploying the Company Portal using an app policy, then users must install it manually. Users don't need to use the Company Portal apps; it just needs to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-<img src="iOS-5.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.">
+<img src="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on macOS devices.">
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test Single Sign on by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com, no username and password will be required.
+You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac) and opening the site https://portal.office.com, no username and password will be required.
 
 
 ## Next steps
