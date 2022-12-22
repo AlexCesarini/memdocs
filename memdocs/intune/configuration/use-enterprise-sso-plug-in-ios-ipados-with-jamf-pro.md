@@ -53,7 +53,7 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
-- The devive must be managed via Jamf Pro
+- The device must be managed via Jamf Pro
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
 
@@ -171,7 +171,7 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test Single Sign on by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com, no username and password will be required.
+You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados) and opening the site https://portal.office.com, no username and password will be required.
 
 
 ## Next steps
