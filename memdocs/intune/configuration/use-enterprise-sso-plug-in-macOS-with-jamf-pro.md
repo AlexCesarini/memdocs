@@ -113,7 +113,6 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
       - `https://sts.windows.net`
       - `https://login.partner.microsoftonline.cn`
       - `https://login.chinacloudapi.cn`
-      - `https://login.microsoftonline.de (?)`
       - `https://login.microsoftonline.us`
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
