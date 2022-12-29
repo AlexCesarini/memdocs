@@ -113,7 +113,6 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
       - `https://sts.windows.net`
       - `https://login.partner.microsoftonline.cn`
       - `https://login.chinacloudapi.cn`
-      - `https://login.microsoftonline.de (?)`
       - `https://login.microsoftonline.us`
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
@@ -128,7 +127,6 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> (????)
     <plist version="1.0">
     <dict>
         <key>AppPrefixAllowList</key>
