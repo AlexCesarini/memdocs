@@ -169,7 +169,7 @@ When the device checks in with the Jamf Pro service, it receives this profile.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac) and opening the site https://portal.office.com, no username and password will be required.
+You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac) (opens Apple's web site) and opening the site https://portal.office.com, no username and password will be required.
 
 On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests.
 
