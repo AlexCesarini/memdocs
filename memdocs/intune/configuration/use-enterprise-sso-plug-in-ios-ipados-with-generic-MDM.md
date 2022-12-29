@@ -98,7 +98,7 @@ In the MDM portal, you create a Device configuration profile. This profile inc
 | Payload Type | SSO |
 | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
 | Sign-On Type | **Redirect** |
-| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.de (?)` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
+| URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
 5. Optionally you could configure other  properties like
 
@@ -127,7 +127,7 @@ When the device checks in with the MDM service, it receives this profile.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test Single Sign on by opening Safari in Private mode https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados and opening the site https://portal.office.com, no username and password will be required.
+You can test Single Sign on by opening Safari in [Private mode](https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados) and opening the site https://portal.office.com, no username and password will be required.
 
 
 ## Next steps
